@@ -1,0 +1,17 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Turtle example
+ */
+
+grammar chiffre;
+
+public <number> = <stance>;
+
+<stance> = <distance> <stance> | <distance>;
+
+<distance> = one | two | three | four | five | six | seven | eight | nine | ten;
+
+
+
+
