@@ -32,9 +32,9 @@ tr = 1
 
 lres = list()
 lref = list()
-nb = 200
-
-
+nb = 100
+digi = 5
+gram = 'number'
 while tr <= nb :
 
 	#decoder = Decoder(config)	
@@ -42,7 +42,7 @@ while tr <= nb :
 	a = (tr/100)
 	b = (tr/10)%10
 	c = tr %10
-	chaine = 'td_corpus_digits/td_corpus_digits/SNR'+str(i)+'dB/man/seq1digit_200_files/SNR'+str(i)+'dB_man_seq1digit_'+str(a)+str(b)+str(c)+'.'	
+	chaine = 'td_corpus_digits/td_corpus_digits/SNR'+str(i)+'dB/man/seq'+str(digi)+'digits_'+str(nb)+'_files/SNR'+str(i)+'dB_man_seq'+str(digi)+'digits_'+str(a)+str(b)+str(c)+'.'	
 	print(chaine);
 	tr = tr+1
 
@@ -72,7 +72,7 @@ while tr <= nb :
 
 # Switch to JSGF grammar
 	jsgf = Jsgf('ps_data/jsgf/1chiffre.gram')
-	rule = jsgf.get_rule('1chiffre.number')
+	rule = jsgf.get_rule('1chiffre.'+gram)
 	fsg = jsgf.build_fsg(rule, decoder.get_logmath(), 7.5)
 	fsg.writefile('chiffre.fsg')
 
@@ -103,7 +103,7 @@ nom = 'data.hyp'
 nom2 = 'data.ref'
 fichier = open(nom,'w')
 fichier2 = open(nom2,'w')
-for i in range(0,200):
+for i in range(0,nb):
 	#print(lref[i])
 	#print(lres[i])
 	#print("--------------")

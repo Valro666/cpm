@@ -8,9 +8,13 @@ grammar 1chiffre;
 
 public <number> = <infini>;
 
+public <a3> = <distance> <distance> <distance>;
+
+public <a5> = <distance> <distance> <distance> <distance> <distance>;
+
 <infini> = <distance> <infini> | <distance>;
 
-<distance> = one | two | three | four | five | six | seven | eight | nine | ten;
+<distance> = one | two | three | four | five | six | seven | eight | nine | ten ;
 
 
 
