@@ -32,9 +32,10 @@ tr = 1
 
 lres = list()
 lref = list()
+nb = 200
 
 
-while tr <= 200 :
+while tr <= nb :
 
 	#decoder = Decoder(config)	
 	decoder.start_utt()
@@ -97,8 +98,18 @@ while tr <= 200 :
 		print (tmp)
 		lref.append(tmp)
 		lres.append(hyp.hypstr)
-
+#nom = 'data'+str(nb)+'1mot'+str(i)+'db.txt'
+nom = 'data.hyp'
+nom2 = 'data.ref'
+fichier = open(nom,'w')
+fichier2 = open(nom2,'w')
 for i in range(0,200):
-	print(lref[i])
-	print(lres[i])
-	print("--------------")
+	#print(lref[i])
+	#print(lres[i])
+	#print("--------------")
+	fichier.write(chaine+'raw '+lres[i]+'\n')
+	fichier2.write(chaine+'ref '+lref[i])
+
+
+fichier2.close()
+fichier.close()

@@ -6,9 +6,9 @@
 
 grammar 1chiffre;
 
-public <number> = <distance>;
+public <number> = <infini>;
 
-<stance> = <distance> <stance> | <distance>;
+<infini> = <distance> <infini> | <distance>;
 
 <distance> = one | two | three | four | five | six | seven | eight | nine | ten;
 
