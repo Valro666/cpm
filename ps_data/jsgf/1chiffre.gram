@@ -8,6 +8,8 @@ grammar 1chiffre;
 
 public <number> = <infini>;
 
+public <a1> = <distance>;
+
 public <a3> = <distance> <distance> <distance>;
 
 public <a5> = <distance> <distance> <distance> <distance> <distance>;
